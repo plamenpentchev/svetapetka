@@ -11,18 +11,27 @@
         "email": "anubhav.srivastava00@gmail.com"
     },
     "dependencies": {
+        "axios": "^0.21.1",
         "gatsby": "^2.20.2",
         "gatsby-plugin-manifest": "^2.3.1",
         "gatsby-plugin-offline": "^3.1.0",
         "gatsby-plugin-react-helmet": "^3.2.0",
         "gatsby-plugin-sass": "^2.2.0",
+        "google-map-react": "^2.1.9",
+        "i18next": "^19.8.9",
+        "i18next-xhr-backend": "^3.2.2",
         "node-sass": "^4.13.1",
         "react": "^16.13.1",
+        "react-country-flag": "^2.3.0",
+        "react-date-picker": "^8.0.7",
         "react-dom": "^16.13.1",
         "react-helmet": "^5.2.1",
+        "react-i18next": "^11.8.7",
         "react-images": "^1.1.0",
         "react-scrollspy": "^3.4.2",
-        "smoothscroll-polyfill": "^0.4.4"
+        "smoothscroll-polyfill": "^0.4.4",
+        "styled-components": "^5.2.1",
+        "typescript": "^2.8.4"
     },
     "scripts": {
         "develop": "gatsby develop",

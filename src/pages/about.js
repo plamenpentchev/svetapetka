@@ -1,9 +1,13 @@
 import React from 'react';
 
 import Layout from '../components/Layout';
+// import '../i18n';
+import { useTranslation } from "react-i18next";
 
-import about from '../assets/images/about.jpg';
-const IndexPage = () => (
+import about from '../assets/images/kirilimetodii.jpg';
+const IndexPage = () => {
+  const {t} = useTranslation(['about', 'index']);
+  return (
   <Layout activeLink="about">
     <section className="page-section about-heading">
       <div className="container">
@@ -18,30 +22,44 @@ const IndexPage = () => (
               <div className="bg-faded rounded p-5">
                 <h2 className="section-heading mb-4">
                   <span className="section-heading-upper">
-                    Strong Coffee, Strong Roots
+                    {t('heading')}
                   </span>
-                  <span className="section-heading-lower">About Our Cafe</span>
+                  <span className="section-heading-lower">
+                    {t('mitFlgndVrstz')}
+                  </span>
                 </h2>
-                <p>
-                  Founded in 1987 by the Hernandez brothers, our establishment
-                  has been serving up rich coffee sourced from artisan farmers
-                  in various regions of South and Central America. We are
-                  dedicated to travelling the world, finding the best coffee,
-                  and bringing back to you here in our cafe.
+                <p className="mb-0 font-weight-bold">
+                  {t('vorsitz')}
                 </p>
                 <p className="mb-0">
-                  We guarantee that you will fall in <em>lust</em> with our
-                  decadent blends the moment you walk inside until you finish
-                  your last sip. Join us for your daily routine, an outing with
-                  friends, or simply just to enjoy some alone time.
+                 {t('index:pfarrer')} {t('index:pfarrerName')} 
                 </p>
-              </div>
+                <p className="mb-0 font-weight-bold">
+                {t('vertreter')}:
+                </p>
+                <p className="mb-0">
+                {t('vertreterName')} 
+                </p>
+                <p className="mb-0 font-weight-bold">
+                {t('sekretar')} :
+                </p>
+                <p className="mb-0">
+                {t('sekretarName')} 
+                </p>
+                <p className="mb-0 font-weight-bold">
+                {t('cassier')} :
+                </p>
+                <p className="mb-3">
+                {t('cassierName')} 
+                </p>
+               </div>
             </div>
           </div>
         </div>
       </div>
     </section>
   </Layout>
-);
+
+)};
 
 export default IndexPage;

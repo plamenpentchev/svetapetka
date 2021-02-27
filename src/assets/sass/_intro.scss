@@ -19,8 +19,37 @@
     }
   }
   @media (min-width: 1200px) {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    justify-content: flex-end;
     .intro-text {
-      width: 45%;
+      width: 35%;
+      .intro-button {
+        position: absolute;
+        bottom: -2rem;
+        left:0;
+        width: 100%;
+      }
     }
+    
+  }
+  
+}
+.contact-entry {
+  display: flex;
+  
+  @media (min-width: 360px) {
+    height: 80;
+    flex-direction: column;
+    justify-content: center;
+  }
+  @media (min-width: 1200px) {
+    flex-direction: row;
+    align-items: baseline;
+    justify-items: center;
+  }
+  p{
+    margin-left: 1rem;
   }
 }

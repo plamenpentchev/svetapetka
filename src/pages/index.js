@@ -1,32 +1,63 @@
 import React from 'react';
 
 import Layout from '../components/Layout';
+// import '../i18n';
+import { useTranslation } from "react-i18next";
 
-import intro from '../assets/images/intro.jpg';
-const IndexPage = () => (
-  <Layout activeLink="home">
-    <section className="page-section clearfix">
+import intro from '../assets/images/Sv-Tsar-Boris-Mihail.jpg';
+
+// import intro from '../assets/images/CarBoris.jpg';
+// import intro from '../assets/images/intro.jpg';
+
+const IndexPage = () => {
+  const { t } = useTranslation('index');
+  const[CONFIGS, setCONFIGS] = React.useState(null);
+ 
+  React.useEffect(()=> {
+    const fetchMassData = async () => {
+      fetch('configs.json', 
+      {
+        headers:{
+          'Content-Type':'application/json',
+          'Accept':'application.json'
+        }
+      })
+      .then(response => {
+        return response.json();
+      })
+      .then(jsonRes => {
+        setCONFIGS(jsonRes);
+      });
+   
+    }
+    fetchMassData();
+    return()=>{}
+  }, []);
+
+  return (
+    CONFIGS && 
+    <Layout activeLink="home">
+          <section className="page-section clearfix">
       <div className="container">
+        
         <div className="intro">
-          <img
+         <img
             className="intro-img img-fluid mb-3 mb-lg-0 rounded"
             src={intro}
             alt=""
           />
           <div className="intro-text left-0 text-center bg-faded p-5 rounded">
             <h2 className="section-heading mb-4">
-              <span className="section-heading-upper">Fresh Coffee</span>
-              <span className="section-heading-lower">Worth Drinking</span>
+              <span className="section-heading-upper"></span>
+              <span className="section-heading-lower">{t('welcome')}</span>
             </h2>
             <p className="mb-3">
-              Every cup of our quality artisan coffee starts with locally
-              sourced, hand picked ingredients. Once you try it, our coffee will
-              be a blissful addition to your everyday morning routine - we
-              guarantee it!
+              {t('more_to_welcome')}
             </p>
             <div className="intro-button mx-auto">
-              <a className="btn btn-primary btn-xl" href="/#">
-                Visit Us Today!
+              <a className="btn btn-primary btn-xl" 
+                  href="https://www.facebook.com/bulgarischeKircheFrankfurt/about/?ref=page_internal">
+                      {t('visit_us_on_fb', "Facebook")} 
               </a>
             </div>
           </div>
@@ -34,28 +65,65 @@ const IndexPage = () => (
       </div>
     </section>
 
-    <section className="page-section cta">
+          <section className="page-section cta">
+            <div className="container">
+              <div className="row">
+                <div className="col-xl-9 mx-auto">
+                  <div className="cta-inner text-center rounded">
+                    <h2 className="section-heading mb-4">
+                      <span className="section-heading-upper">{t('kirchenVorstand')}</span>
+                    </h2>
+                    <p className="mb-0">
+                      {t('pfarrer')} {t('pfarrerName')}
+                    </p>
+                    <div className="contact-entry">
+                      <strong>{t('tel')}.:</strong>
+                      <p className="mb-0 font-weight-bold">
+                      {CONFIGS.telNrPriest}
+                      </p>
+                    </div>
+                    <div className="contact-entry">
+                      <strong>{t('email')}:</strong>
+                      <p className="mb-0 font-weight-bold">
+                      {CONFIGS.emailPriestIs} 
+                      </p>
+                    </div>
+                    
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+          <section className="page-section cta">
       <div className="container">
         <div className="row">
           <div className="col-xl-9 mx-auto">
             <div className="cta-inner text-center rounded">
               <h2 className="section-heading mb-4">
-                <span className="section-heading-upper">Our Promise</span>
-                <span className="section-heading-lower">To You</span>
+                <span className="section-heading-upper">{t('bankData')}</span>
+                <span className="section-heading-upper"></span>
               </h2>
               <p className="mb-0">
-                When you walk into our shop to start your day, we are dedicated
-                to providing you with friendly service, a welcoming atmosphere,
-                and above all else, excellent products made with the highest
-                quality ingredients. If you are not satisfied, please let us
-                know and we will do whatever we can to make things right!
+               {CONFIGS.bankHolder}
+              </p>
+              
+              <p className="mb-0">
+              {CONFIGS.bankName}
+              </p>
+              <p className="mb-0">
+              {t('bankAccount')}: {CONFIGS.bankAccountIs}
+              </p>
+              <p className="mb-0">
+              {t('bankCode')}: {CONFIGS.bankCodeIs}
               </p>
             </div>
           </div>
         </div>
       </div>
     </section>
-  </Layout>
-);
+    </Layout>
+ 
+  )
+};
 
 export default IndexPage;

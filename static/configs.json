@@ -1,0 +1,18 @@
+{
+    "heading": "Bulgarische Orthodoxe Kirchengemeinde",
+    "subHeading": "Hl. Zar Boris Michail",
+    "subHeading2": "Frankfurt am Main e.V.",
+    "emailPriestIs":"pfr.marinov@googlemail.com",
+    "telNrPriest":"+49 157 75967916",
+    "bankHolder":"Bulgarische Orthodoxe Kirchengemeinde Hl. Zar Boris I",
+    "bankName":"Volksbank Griesheim",
+    "bankAccountIs": "112018115",
+    "bankCodeIs": "50190400",
+    "massAddress":"Oeserstraße 126",
+    "massAddressCity":"65934 Frankfurt am Main",
+    "takeNLastMasses":3,
+    "googleMapsAPIKey":"AIzaSyBksjl9WT5S6iYg3jkPxjdpVh_hG_J3hGw",
+    "googleMapsDefaultCenter":{"lat":50.106759, "lng": 8.581242},
+    "googleMapsZoom": 11,
+    "takeSundays": true
+}

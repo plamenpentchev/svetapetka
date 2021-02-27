@@ -5,3 +5,21 @@
  */
 
 // You can delete this file if you're not using it
+// exports.onCreateWebpackConfig = ({ actions }) => {
+//     actions.setWebpackConfig({
+//       node: {
+//         fs: "empty",
+//       },
+//     })
+//   }
+var path = require('path');
+  exports.onCreateWebpackConfig = ({ stage, actions }) => {
+    actions.setWebpackConfig({
+      resolve: {
+        modules: [path.resolve(__dirname, "src"), "node_modules"],
+      },
+     node: {
+         fs: "empty",
+        },
+    })
+  }
