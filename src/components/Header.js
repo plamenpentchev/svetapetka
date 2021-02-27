@@ -18,6 +18,7 @@ const Header =({ activeLink }) =>{
   
 
   return (
+    <React.Fragment>
     <nav className="navbar navbar-expand-lg navbar-dark" id="mainNav">
       <div className="container">
         <a
@@ -161,7 +162,13 @@ const Header =({ activeLink }) =>{
           </div>
         </div>
       </div>
+      
     </nav>
+    
+    <div className="hotnews">
+    <p style={{color:'white'}}>{t('crawlText')}</p>
+  </div>
+  </React.Fragment>
   );
 }
 export default  Header;

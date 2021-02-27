@@ -37,7 +37,9 @@ const IndexPage = () => {
   return (
     CONFIGS && 
     <Layout activeLink="home">
+       
           <section className="page-section clearfix">
+          
       <div className="container">
         
         <div className="intro">
