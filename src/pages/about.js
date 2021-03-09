@@ -5,6 +5,8 @@ import Layout from '../components/Layout';
 import { useTranslation } from "react-i18next";
 
 import about from '../assets/images/kirilimetodii.jpg';
+// import about from '../assets/images/CarkObshtina.jpeg';
+
 const IndexPage = () => {
   const {t} = useTranslation(['about', 'index']);
   return (
@@ -22,35 +24,35 @@ const IndexPage = () => {
               <div className="bg-faded rounded p-5">
                 <h2 className="section-heading mb-4">
                   <span className="section-heading-upper">
-                    {t('heading')}
+                    {t('heading', '')}
                   </span>
                   <span className="section-heading-lower">
-                    {t('mitFlgndVrstz')}
+                    {t('mitFlgndVrstz', '')}
                   </span>
                 </h2>
                 <p className="mb-0 font-weight-bold">
-                  {t('vorsitz')}
+                  {t('vorsitz', '')}
                 </p>
                 <p className="mb-0">
-                 {t('index:pfarrer')} {t('index:pfarrerName')} 
+                 {t('index:pfarrer', '')} {t('index:pfarrerName', '')} 
                 </p>
                 <p className="mb-0 font-weight-bold">
-                {t('vertreter')}:
+                {t('vertreter', '')}:
                 </p>
                 <p className="mb-0">
-                {t('vertreterName')} 
+                {t('vertreterName', '')} 
                 </p>
                 <p className="mb-0 font-weight-bold">
-                {t('sekretar')} :
+                {t('sekretar', '')} :
                 </p>
                 <p className="mb-0">
-                {t('sekretarName')} 
+                {t('sekretarName', '')} 
                 </p>
                 <p className="mb-0 font-weight-bold">
-                {t('cassier')} :
+                {t('cassier', '')} :
                 </p>
                 <p className="mb-3">
-                {t('cassierName')} 
+                {t('cassierName', '')} 
                 </p>
                </div>
             </div>

@@ -5,6 +5,8 @@ import Layout from '../components/Layout';
 import { useTranslation } from "react-i18next";
 
 import intro from '../assets/images/Sv-Tsar-Boris-Mihail.jpg';
+import carkObshtina from '../assets/images/CarkObshtina.jpeg';
+
 
 // import intro from '../assets/images/CarBoris.jpg';
 // import intro from '../assets/images/intro.jpg';
@@ -38,7 +40,7 @@ const IndexPage = () => {
     CONFIGS && 
     <Layout activeLink="home">
        
-          <section className="page-section clearfix">
+    <section className="page-section clearfix">
           
       <div className="container">
         
@@ -48,81 +50,96 @@ const IndexPage = () => {
             src={intro}
             alt=""
           />
-          <div className="intro-text left-0 text-center bg-faded p-5 rounded">
+          <div className="intro-text left-0 text-center bg-faded p-5 rounded " >
             <h2 className="section-heading mb-4">
               <span className="section-heading-upper"></span>
-              <span className="section-heading-lower">{t('welcome')}</span>
+              <span className="section-heading-lower">{t('welcome', '')}</span>
             </h2>
             <p className="mb-3">
-              {t('more_to_welcome')}
+              {t('more_to_welcome', '')}
             </p>
             <div className="intro-button mx-auto">
               <a className="btn btn-primary btn-xl" 
                   href="https://www.facebook.com/bulgarischeKircheFrankfurt/about/?ref=page_internal">
-                      {t('visit_us_on_fb', "Facebook")} 
+                      {t('visit_us_on_fb', '')} 
               </a>
             </div>
           </div>
         </div>
       </div>
     </section>
-
-          <section className="page-section cta">
-            <div className="container">
-              <div className="row">
-                <div className="col-xl-9 mx-auto">
-                  <div className="cta-inner text-center rounded">
-                    <h2 className="section-heading mb-4">
-                      <span className="section-heading-upper">{t('kirchenVorstand')}</span>
-                    </h2>
-                    <p className="mb-0">
-                      {t('pfarrer')} {t('pfarrerName')}
-                    </p>
-                    <div className="contact-entry">
-                      <strong>{t('tel')}.:</strong>
-                      <p className="mb-0 font-weight-bold">
-                      {CONFIGS.telNrPriest}
-                      </p>
-                    </div>
-                    <div className="contact-entry">
-                      <strong>{t('email')}:</strong>
-                      <p className="mb-0 font-weight-bold">
-                      {CONFIGS.emailPriestIs} 
-                      </p>
-                    </div>
-                    
-                  </div>
-                </div>
+    
+    {/* <section >
+    <div className="container">
+        
+        <div className="intro">
+         <img
+            className="img-fluid mb-3 mb-lg-0 rounded"
+            src={carkObshtina}
+            alt=""
+          />
+        </div>
+        </div>
+    </section> */}
+    <section className="page-section cta">
+      <div className="container">
+        <div className="row">
+          <div className="col-xl-9 mx-auto">
+            <div className="cta-inner text-center rounded">
+            
+              <h2 className="section-heading mb-4">
+                <span className="section-heading-upper">{t('kirchenVorstand', '')}</span>
+              </h2>
+              <p className="mb-0">
+                {t('pfarrer', '')} {t('pfarrerName', '')}
+              </p>
+              <div className="contact-entry">
+                <strong>{t('tel', '')}.:</strong>
+                <p className="mb-0 font-weight-bold">
+                {CONFIGS.telNrPriest}
+                </p>
               </div>
+              <div className="contact-entry">
+                <strong>{t('email', '')}:</strong>
+                <p className="mb-0 font-weight-bold">
+                {CONFIGS.emailPriestIs} 
+                </p>
+              </div>
+              
             </div>
-          </section>
-          <section className="page-section cta">
+          </div>
+        </div>
+      </div>
+    </section>
+    <section className="page-section cta">
       <div className="container">
         <div className="row">
           <div className="col-xl-9 mx-auto">
             <div className="cta-inner text-center rounded">
               <h2 className="section-heading mb-4">
-                <span className="section-heading-upper">{t('bankData')}</span>
+                <span className="section-heading-upper">{t('bankData', '')}</span>
                 <span className="section-heading-upper"></span>
               </h2>
               <p className="mb-0">
-               {CONFIGS.bankHolder}
+              {CONFIGS.bankHolder}
               </p>
               
               <p className="mb-0">
               {CONFIGS.bankName}
               </p>
               <p className="mb-0">
-              {t('bankAccount')}: {CONFIGS.bankAccountIs}
+              {t('bankAccount', '')}: {CONFIGS.bankAccountIs}
               </p>
               <p className="mb-0">
-              {t('bankCode')}: {CONFIGS.bankCodeIs}
+              {t('bankCode', '')}: {CONFIGS.bankCodeIs}
               </p>
             </div>
           </div>
         </div>
       </div>
+      
     </section>
+   
     </Layout>
  
   )

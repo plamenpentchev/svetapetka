@@ -91,42 +91,42 @@ const IndexPage = () => {
 
   return(
     CONFIGS && 
-    <Layout activeLink="store">
+    <Layout activeLink="mass-calender">
     <section className="page-section cta">
       <div className="container">
         <div className="row">
           <div className="col-xl-9 mx-auto">
             <div className="cta-inner text-center rounded">
               <h2 className="section-heading mb-5">
-                <span className="section-heading-upper">{t('weServe')}</span>
-                <span className="section-heading-lower">{t('when')}</span>
+                <span className="section-heading-upper">{t('weServe', '')}</span>
+                <span className="section-heading-lower">{t('when', '')}</span>
               </h2>
               <ul className="list-unstyled list-hours mb-5 text-left mx-auto">
               <div className="address mb-5 text-center">
-                <p>{t('where')}</p>
+                <p>{t('where', '')}</p>
                 <em>
                   <strong>{CONFIGS.massAddress}</strong>
                   <br />
                   {CONFIGS.massAddressCity}
                 </em>
               </div>
-              <p>{t('next-mass')}:</p>
+              <p>{t('next-mass', '')}:</p>
               {nextMass && <div key={nextMass.day} >
                 <li  className="list-unstyled-item list-hours-item d-flex font-weight-bold">
-                  {t(`day-${nextMass.dayOfWeek}`)} {t('onDay')} {nextMass.day}
-                  <span className="ml-auto">{t('atHour')}  {nextMass.hour}</span>
+                  {t(`day-${nextMass.dayOfWeek}`, '')} {t('onDay', '')} {nextMass.day}
+                  <span className="ml-auto">{t('atHour', '')}  {nextMass.hour}</span>
                 </li>
                 {nextMass.remark && <div className="mass-remark">{t(`${nextMass.remark}`)}</div>}
                   </div>
               }
-              <p>{t('recent-masses')}:</p>
+              <p>{t('recent-masses', '')}:</p>
               {recentMasses  && nLastMasses &&
                 recentMasses.slice(0, nLastMasses).map(m => <div key={m.day} >
                     <li className="list-unstyled-item list-hours-item d-flex">
-                    {t(`day-${m.dayOfWeek}`)} {t('onDay')} {m.day}
-                      <span className="ml-auto">{t('atHour')}  {m.hour}</span>
+                    {t(`day-${m.dayOfWeek}`, '')} {t('onDay', '')} {m.day}
+                      <span className="ml-auto">{t('atHour', '')}  {m.hour}</span>
                     </li>
-                    {m.remark && <div className="mass-remark">{t(`${m.remark}`)}</div>}
+                    {m.remark && <div className="mass-remark">{t(`${m.remark}`, '')}</div>}
                 </div>)
 
               }
@@ -134,7 +134,7 @@ const IndexPage = () => {
              
               <p className="mb-0">
                 <small>
-                  <em>{t('youCanReachPastor')}</em>
+                  <em>{t('youCanReachPastor', '')}</em>
                 </small>
                 <br />
                 {CONFIGS.telNrPriest}
@@ -167,16 +167,16 @@ const IndexPage = () => {
                 
               <h2 className="section-heading mb-4 mt-4">
                   <span className="section-heading-upper">
-                  {t('vereinbarungTitle')}
+                  {t('vereinbarungTitle', '')}
                   </span>
-                  <span className="section-heading-lower">{t('vereinbarungMit')}</span>
+                  <span className="section-heading-lower">{t('vereinbarungMit', '')}</span>
                 </h2>
                 <p>
-                  {t('vereinbarungContent')} 
+                  {t('vereinbarungContent', '')} 
                     <strong>
                       {CONFIGS.massAddress}, {CONFIGS.massAddressCity}
                     </strong> 
-                   {t('vereinbarungContentMore')}
+                   {t('vereinbarungContentMore', '')}
                 </p>
               
               </div>

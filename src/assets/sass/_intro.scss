@@ -2,13 +2,15 @@
   position: relative;
   @media (min-width: 992px) {
     .intro-img {
-      width: 75%;
+      width: 95%;
       float: right;
     }
+    
     .intro-text {
       left: 0;
-      width: 60%;
-      margin-top: 3rem;
+      width: 80%;
+      // margin-top: 3rem;
+      // top:30rem;
       position: absolute;
       .intro-button {
         width: 100%;
@@ -36,6 +38,7 @@
   }
   
 }
+
 .contact-entry {
   display: flex;
   

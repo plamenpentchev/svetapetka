@@ -179,7 +179,7 @@ const IndexPage = () => {
 
   return(
     CONFIGS && 
-    <Layout activeLink="store">
+    <Layout activeLink="orthodox-calendar">
     <section className="page-section cta">
       <div className="container">
         <div className="row">
@@ -190,7 +190,7 @@ const IndexPage = () => {
                     <DatePicker
                         className="date-picker"
                         onChange={(e)=> {
-                            setDayHistory(t('pleaseWait'));
+                            setDayHistory(t('pleaseWait', ''));
                             setDayOfYear(e);
                         }}
                         value={dayOfYear}

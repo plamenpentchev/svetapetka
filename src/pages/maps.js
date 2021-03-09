@@ -84,14 +84,14 @@ const IndexPage = () => {
         return()=>{}
       }, []);
     return (
-        <Layout noFooter>
+        <Layout noFooter activeLink="maps">
         <section className="page-section cta">
         <div className="container">
             <div className="row">
             <div className="col-xl-9 mx-auto">
                 <div className="cta-inner text-center rounded">
                 <h2 className="section-heading mb-5">
-                    <span>{t('youCanFindUsHere')}</span>
+                    <span>{t('youCanFindUsHere', '')}</span>
                 </h2>
                 {CONFIGS && places.length > 0 && <div style={{height:'50vh', width:'100%'}}>
                     <GoogleMapReact 

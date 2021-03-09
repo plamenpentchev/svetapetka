@@ -81,7 +81,7 @@ const Header =({ activeLink }) =>{
             </li>
             <li
               className={`nav-item px-lg-4 ${
-                activeLink === 'store' ? 'active' : ''
+                activeLink === 'maps' ? 'active' : ''
               }`}
             >
               <Link
@@ -94,7 +94,7 @@ const Header =({ activeLink }) =>{
           
             <li
               className={`nav-item px-lg-4 ${
-                activeLink === 'products' ? 'active' : ''
+                activeLink === 'photos' ? 'active' : ''
               }`}
             >
               <Link
@@ -106,7 +106,7 @@ const Header =({ activeLink }) =>{
             </li>
             <li
               className={`nav-item px-lg-4 ${
-                activeLink === 'store' ? 'active' : ''
+                activeLink === 'mass-calender' ? 'active' : ''
               }`}
             >
               <Link
@@ -118,7 +118,7 @@ const Header =({ activeLink }) =>{
             </li>
             <li
               className={`nav-item px-lg-4 ${
-                activeLink === 'store' ? 'active' : ''
+                activeLink === 'orthodox-calendar' ? 'active' : ''
               }`}
             >
               <Link

@@ -13,7 +13,7 @@ import OtcheNash from '../assets/images/OtcheNash.jpg';
 const IndexPage = () => {
   const {t} =useTranslation('photos');
   return(
-    <Layout activeLink="products">
+    <Layout activeLink="photos">
       <section className="page-section">
         <div className="container">
           <div className="product-item">
@@ -21,10 +21,10 @@ const IndexPage = () => {
               <div className="bg-faded p-5 d-flex ml-auto rounded">
                 <h2 className="section-heading mb-0">
                   <span className="section-heading-upper">
-                    {t('OtcheNashTitle')}
+                    {t('OtcheNashTitle', '')}
                   </span>
                   <span className="section-heading-lower">
-                  {t('OtcheNashSubTitle')}
+                  {t('OtcheNashSubTitle', '')}
                   </span>
                 </h2>
               </div>
@@ -37,11 +37,11 @@ const IndexPage = () => {
             <div className="product-item-description d-flex mr-auto">
               <div className="bg-faded p-5 rounded">
                 <p className="mb-0">
-                  {t('OtcheNash')}
+                  {t('OtcheNash', '')}
                 </p>
-                <p>{t('OtcheNash2')}</p>
-                <p>{t('OtcheNash3')}</p>
-                <p>{t('OtcheNash4')}</p>
+                <p>{t('OtcheNash2', '')}</p>
+                <p>{t('OtcheNash3', '')}</p>
+                <p>{t('OtcheNash4', '')}</p>
               </div>
             </div>
           </div>
@@ -55,10 +55,10 @@ const IndexPage = () => {
               <div className="bg-faded p-5 d-flex mr-auto rounded">
                 <h2 className="section-heading mb-0">
                   <span className="section-heading-upper">
-                  {t('bludniqSinTitle')}
+                  {t('bludniqSinTitle', '')}
                   </span>
                   <span className="section-heading-lower">
-                  {t('bludniqSinSubTitle')}
+                  {t('bludniqSinSubTitle', '')}
                   </span>
                 </h2>
               </div>
@@ -71,10 +71,10 @@ const IndexPage = () => {
             <div className="product-item-description d-flex ml-auto">
               <div className="bg-faded p-5 rounded">
                 <p className="mb-0">
-                {t('bludniqSinText')}
+                {t('bludniqSinText', '')}
                 </p>
                 <p className="mb-0">
-                {t('bludniqSinText2')}
+                {t('bludniqSinText2', '')}
                 </p>
               </div>
             </div>
@@ -89,10 +89,10 @@ const IndexPage = () => {
               <div className="bg-faded p-5 d-flex ml-auto rounded">
                 <h2 className="section-heading mb-0">
                   <span className="section-heading-upper">
-                  {t('cricifixTitle')}
+                  {t('cricifixTitle', '')}
                   </span>
                   <span className="section-heading-lower">
-                  {t('cricifixSubTitle')}
+                  {t('cricifixSubTitle', '')}
                   </span>
                 </h2>
               </div>
@@ -105,7 +105,7 @@ const IndexPage = () => {
             <div className="product-item-description d-flex mr-auto">
               <div className="bg-faded p-5 rounded">
                 <p className="mb-0">
-                {t('cricifixText')}
+                {t('cricifixText', '')}
                 </p>
               </div>
             </div>
