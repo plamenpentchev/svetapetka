@@ -5,7 +5,7 @@ import Layout from '../components/Layout';
 import { useTranslation } from "react-i18next";
 
 import intro from '../assets/images/Sv-Tsar-Boris-Mihail.jpg';
-import carkObshtina from '../assets/images/CarkObshtina.jpeg';
+// import carkObshtina from '../assets/images/CarkObshtina.jpeg';
 
 
 // import intro from '../assets/images/CarBoris.jpg';
