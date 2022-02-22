@@ -23,16 +23,21 @@ const IndexPage = () => {
   const splitDatesInBeforeAftre = (allDates, pivotDate)=> {
     const before = [];
     const after = [];
+  
     allDates.forEach(elem => {
       const [day, month, year] = elem.day.split('.');
+      
       const dat1 = new Date(parseInt(year), parseInt(month)-1, parseInt(day));
-    
+
+      elem.remark = "remark-" + year + month + day
+
       if(pivotDate > dat1){
         before.push(elem);
       }else{
         after.push(elem);
       }
     })
+
     return {before, after};
   }
 
@@ -52,9 +57,10 @@ const IndexPage = () => {
       })
       .then(jsonRes => {
         const{before, after} = splitDatesInBeforeAftre(jsonRes, new Date());
+         
         setRecentMasses(before);
         setNextMasses(after);
-        setNextMass(after[after.length -1]);
+        setNextMass(after[0]);
       });
    
     }
@@ -81,13 +87,10 @@ const IndexPage = () => {
   }, []);
 
   // React.useEffect(()=>{
-  //   if (data && data.length > 0) {
-  //     const tmp = data;
-
-  //     setNextMass(tmp.shift());
-  //     setRecentMasses(tmp);
+  //   if (nLastMasses> 0) {
+  //     setRecentMasses(before.slice(-1 * nLastMasses).reverse());
   //   }
-  // },[data]);
+  // },[nLastMasses]);
 
   return(
     CONFIGS && 
@@ -116,12 +119,12 @@ const IndexPage = () => {
                   {t(`day-${nextMass.dayOfWeek}`, '')} {t('onDay', '')} {nextMass.day}
                   <span className="ml-auto">{t('atHour', '')}  {nextMass.hour}</span>
                 </li>
-                {nextMass.remark && <div className="mass-remark">{t(`${nextMass.remark}`)}</div>}
+                {nextMass.remark && <div className="mass-remark">{t(`remark-nächster-termin`)}{t(`${nextMass.remark}`)}</div>}
                   </div>
               }
               <p>{t('recent-masses', '')}:</p>
               {recentMasses  && nLastMasses &&
-                recentMasses.slice(0, nLastMasses).map(m => <div key={m.day} >
+                recentMasses.slice(-1 * nLastMasses).reverse().map(m => <div key={m.day} >
                     <li className="list-unstyled-item list-hours-item d-flex">
                     {t(`day-${m.dayOfWeek}`, '')} {t('onDay', '')} {m.day}
                       <span className="ml-auto">{t('atHour', '')}  {m.hour}</span>

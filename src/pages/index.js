@@ -4,7 +4,8 @@ import Layout from '../components/Layout';
 // import '../i18n';
 import { useTranslation } from "react-i18next";
 
-import intro from '../assets/images/Sv-Tsar-Boris-Mihail.jpg';
+import intro from '../assets/images/Sveta_Petka2.png';
+// import intro from '../assets/images/Sv-Tsar-Boris-Mihail.jpg';
 // import carkObshtina from '../assets/images/CarkObshtina.jpeg';
 
 
@@ -60,7 +61,7 @@ const IndexPage = () => {
             </p>
             <div className="intro-button mx-auto">
               <a className="btn btn-primary btn-xl" 
-                  href="https://www.facebook.com/bulgarischeKircheFrankfurt/about/?ref=page_internal">
+                  href="https://m.facebook.com/%D0%91%D0%9F%D0%A6%D0%9E-%D0%A1%D0%B2-%D0%9F%D0%B5%D1%82%D0%BA%D0%B0-%D0%A2%D1%8A%D1%80%D0%BD%D0%BE%D0%B2%D1%81%D0%BA%D0%B0-%D0%B3%D1%80-%D0%9C%D0%B0%D0%BD%D1%85%D0%B0%D0%B9%D0%BC-123713835011734/">
                       {t('visit_us_on_fb', '')} 
               </a>
             </div>
