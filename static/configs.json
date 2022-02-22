@@ -11,7 +11,7 @@
     "massAddress":"Bellenstraße 65",
     "massAddressCity":"68163 Mannheim",
     "takeNLastMasses":3,
-    "googleMapsAPIKey":"AIzaSyBksjl9WT5S6iYg3jkPxjdpVh_hG_J3hGw",
+    "googleMapsAPIKey":"",
     "googleMapsDefaultCenter":{"lat":49.47353668892304, "lng": 8.470553815061265},
     "googleMapsZoom": 11,
     "takeSundays": true
