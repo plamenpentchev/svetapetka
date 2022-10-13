@@ -1,14 +1,14 @@
 {
-    "name": "gatsby-starter-casual",
+    "name": "svetapetka",
     "version": "0.0.1",
-    "description": "Gatsby.js V2 starter template based on Casual by startbootstrap",
+    "description": "Webpräsenz der bulgarischen orthodoxen Kirche in Mannheim",
     "repository": {
         "type": "git",
-        "url": "git+https://github.com/anubhavsrivastava/gatsby-starter-casual.git"
+        "url": "git+https://github.com/plamenpentchev/svetapetka"
     },
     "author": {
-        "name": "Anubhav Srivastava",
-        "email": "anubhav.srivastava00@gmail.com"
+        "name": "Plamen Pentchev",
+        "email": "plamenpentchev@yahoo.com"
     },
     "dependencies": {
         "axios": "^0.26.0",
@@ -50,11 +50,12 @@
     "keywords": [
         "gatsby",
         "gatsby-starter",
-        "gatsby-starter-casual"
+        "gatsby-starter-casual",
+        "svetapetka"
     ],
     "license": "MIT",
     "bugs": {
-        "url": "https://github.com/anubhavsrivastava/gatsby-starter-casual/issues"
+        "url": "https://github.com/plamenpentcheva/svetapetka/issues"
     },
-    "homepage": "https://github.com/anubhavsrivastava/gatsby-starter-casual#readme"
+    "homepage": "https://svetapetka-mannheim.de"
 }
