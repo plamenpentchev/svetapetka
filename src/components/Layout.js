@@ -7,6 +7,7 @@ import '../assets/sass/business-casual.scss';
 import Footer from './Footer';
 import SiteHeader from './SiteHeader';
 import Header from './Header';
+import { useSiteMetadata } from "../hooks/use-site-metadata"
 
 class Layout extends Component {
   render() {
@@ -17,6 +18,9 @@ class Layout extends Component {
       noSiteHeader,
       activeLink,
     } = this.props;
+
+    const { title: defaultTitle, description: defaultDescription,  siteUrl, keywords } = useSiteMetadata()
+
     return (
       <StaticQuery
         query={graphql`
@@ -34,7 +38,7 @@ class Layout extends Component {
               title={data.site.siteMetadata.title}
               meta={[
                 { name: 'description', content: 'Casual' },
-                { name: 'keywords', content: 'site, web' },
+                { name: 'keywords', content: keywords },
               ]}
             >
               <html lang="en" />

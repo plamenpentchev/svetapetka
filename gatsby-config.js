@@ -4,6 +4,9 @@ module.exports = {
   pathPrefix: config.pathPrefix,
   siteMetadata: {
     title: config.siteTitle,
+    description: `Webseite und Webpräsenz der bulgarischen orthodoxen Kirche in Mannheim`,
+    siteUrl: `https://svetapetka-mannheim.de`,
+    keywords:`sveta, petka, mannheim, sveta petka mannheim, tarnovska, bulgarische, kirche, mannheim, света, петка, търновска, света петка търновска, манхайм, българска, църква, българска църква манхайм,`
   },
   plugins: [
     'gatsby-plugin-react-helmet',
