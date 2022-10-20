@@ -18,7 +18,6 @@ const IndexPage = () => (
         </div>
       </div>
     </section>
-    >
   </Layout>
 );
 

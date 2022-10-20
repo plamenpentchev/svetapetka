@@ -9,25 +9,27 @@ import SiteHeader from './SiteHeader';
 import Header from './Header';
 import { useSiteMetadata } from "../hooks/use-site-metadata"
 
-class Layout extends Component {
-  render() {
-    const {
-      children,
-      noHeader,
-      noFooter,
-      noSiteHeader,
-      activeLink,
-    } = this.props;
+const Layout =( {
+  children,
+  noHeader,
+  noFooter,
+  noSiteHeader,
+  activeLink,
+}) => {
 
-    const { title: defaultTitle, description: defaultDescription,  siteUrl, keywords } = useSiteMetadata()
+     //const { title: defaultTitle, description: defaultDescription,  siteUrl, keywords } = useSiteMetadata();
+    //const keywords = `sveta, petka, mannheim, sveta petka mannheim, tarnovska, bulgarische, kirche, mannheim, света, петка, търновска, света петка търновска, манхайм, българска, църква, българска църква манхайм,`
 
     return (
       <StaticQuery
         query={graphql`
-          query SiteTitleQuery {
+          query  {
             site {
               siteMetadata {
                 title
+                description
+                siteUrl
+                keywords
               }
             }
           }
@@ -38,7 +40,7 @@ class Layout extends Component {
               title={data.site.siteMetadata.title}
               meta={[
                 { name: 'description', content: 'Casual' },
-                { name: 'keywords', content: keywords },
+                { name: 'keywords', content: data.site.siteMetadata.keywords },
               ]}
             >
               <html lang="en" />
@@ -53,7 +55,6 @@ class Layout extends Component {
         )}
       />
     );
-  }
 }
 
 Layout.propTypes = {
